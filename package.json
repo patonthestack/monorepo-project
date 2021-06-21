@@ -1,0 +1,59 @@
+{
+  "name": "mono2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:write": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "prepare": "husky install .husky",
+    "dev:web": "yarn workspace @loveisblank/web dev",
+    "dev:app": "yarn workspace @loveisblank/native start",
+    "dev:app-ios": "yarn workspace @loveisblank/native ios",
+    "dev:app-android": "yarn workspace @loveisblank/native android"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ],
+    "nohoist": [
+      "**/react-native**",
+      "**/@react-native-community",
+      "**/@react-native-community/**",
+      "**/@react-navigation",
+      "**/@react-navigation/**",
+      "**/next",
+      "**/next/**",
+      "**/@next",
+      "**/@next/**"
+    ]
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^3.0.0",
+    "@react-native-community/eslint-plugin": "^1.1.0",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-flowtype": "^5.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-native": "^3.10.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "react": "^18.0.0-alpha-568dc3532",
+    "react-dom": "^18.0.0-alpha-568dc3532"
+  }
+}

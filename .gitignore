@@ -1,0 +1,11 @@
+
+# Others
+coverage
+node_modules/
+.idea
+yarn-error.log
+package-lock.jon
+java_pid*
+.DS_Store
+.next
+.env
